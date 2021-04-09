@@ -1,4 +1,4 @@
-# MQTT to InfluxDB Bridge
+# MQTT to InfluxDB Bridge for Tasmota Devices 
 
 ## Build
 
