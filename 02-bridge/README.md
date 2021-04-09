@@ -3,14 +3,14 @@
 ## Build
 
 ```sh
-$ docker build -t nilhcem/mqttbridge .
+$ docker build -t revil-O/mqttbridge .
 ```
 
 
 ## Run
 
 ```sh
-$ docker run -d --name mqttbridge nilhcem/mqttbridge
+$ docker run -d --name mqttbridge revil-O/mqttbridge
 ```
 
 
