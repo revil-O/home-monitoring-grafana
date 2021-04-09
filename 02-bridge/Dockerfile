@@ -1,6 +1,6 @@
 FROM python:3.7-alpine
 
-LABEL maintainer="Nilhcem" \
+LABEL maintainer="revil-O" \
       description="MQTT to InfluxDB Bridge"
 
 COPY requirements.txt /
