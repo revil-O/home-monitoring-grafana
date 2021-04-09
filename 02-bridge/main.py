@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""A MQTT to InfluxDB Bridge
+"""A MQTT to InfluxDB Bridge to persist Tasmota-Device-Data
 
 This script receives MQTT data and saves those to InfluxDB.
 
@@ -20,12 +20,11 @@ INFLUXDB_DATABASE = 'home_db'
 MQTT_ADDRESS = 'mosquitto'
 MQTT_USER = 'mqttuser'
 MQTT_PASSWORD = 'mqttpassword'
-MQTT_TOPIC = 'home/+/+'  # [bme280|mijia]/[temperature|humidity|battery|status]
-MQTT_REGEX = 'home/([^/]+)/([^/]+)'
+MQTT_TOPIC = '+/home/+/+'  # 
+MQTT_REGEX = '+/home/([^/]+)/([^/]+)'
 MQTT_CLIENT_ID = 'MQTTInfluxDBBridge'
 
 influxdb_client = InfluxDBClient(INFLUXDB_ADDRESS, 8086, INFLUXDB_USER, INFLUXDB_PASSWORD, None)
-
 
 class SensorData(NamedTuple):
     location: str
